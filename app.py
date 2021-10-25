@@ -77,4 +77,7 @@ def login():
 		token = token_manager.login_jwt_encode()
 		return make_response('successlly logged in', 200, {'token': token})
 	return make_response('password no not match', 401, {'Authentication': "login required"})
+
+
+if __name__ == "__main__":
 	app.run(debug = True)
